@@ -1,0 +1,83 @@
+#donbaler-username {
+	font-weight:  bold;
+	font-size:16px;
+}
+#Donbaler {
+	display : inline-block;
+	border : 0px solid #009ACA;
+	border-radius : 5px;
+	overflow : hidden; 
+	float:right;
+ }
+#Donbaler div {
+    text-align: justify;
+}
+#Donbaler_tweet {
+    width:98%;
+	padding:2px;
+	margin-top:2px;
+	margin-left:2px;
+	margin-right:2px;
+	margin-bottom:2px;
+}
+#Donbaler_loader {
+  text-align: center;
+  background: #FFF990;
+  padding: 10px;
+}
+#Donbaler_picture{
+	border:2px solid #ededed;
+	margin: 2px 2px 2px 10px;
+	float:right;
+}
+#dnbabzarak {
+    margin-bottom:5px;
+    border-bottom: 1px dashed #cccccc;
+}
+#dnbabzarak:last-child {
+	border-bottom: none;
+}
+#dnbabzarak a {
+	text-decoration:none;
+	border-bottom: 1px solid #ededed;
+}
+#dnbabzarak a:hover {
+	border-bottom: 1px solid #E42727;
+}
+#Donbaler_profile a{
+    text-decoration:none;
+}
+#Donbaler_profile {
+	//
+}
+#Donbaler_profile p {
+	padding:0px;
+	margin:0px;
+	line-height:20px;
+}	
+#Donbaler_profile a{
+	text-decoration:none;
+}
+#Donbaler_profile .counts{
+	float: right;
+	text-align: center;
+	width: 100%;
+	margin-top: 15px;
+}	
+#Donbaler_profile .counts a {
+	font-weight: normal;
+	  color: #939393;
+}
+#Donbaler_profile .counts span {
+	font-weight: bold;
+	color: #545454;
+}
+#Donbaler_profile .counts td  {
+	text-align: center;
+	width: 28%;
+}	
+#Donbaler_profile .counts td span {
+	text-align: center;
+	width: 28%;
+	font-weight: bold;
+}
