@@ -17,10 +17,11 @@
 			extract( $args );
 			$username = apply_filters('widget_username', $instance['username']);
 			$tedad = apply_filters('widget_tedad', $instance['tedad']);
-			echo $before_widget;
+			echo $args['before_widget'];
+			echo $args['before_title'] . apply_filters( 'widget_title', (!empty($instance['title']) ? $instance['title'] : 'ابزارک دنبالر') ). $args['after_title'];
 			echo '<script type="text/javascript">var donbaler_user = "'.esc_attr($username).'"; var donbaler_numpost = "'.intval($tedad).'";</script>';
 			echo '<div id="donbaler_div"><div id="Donbaler_profile"></div><div id="Donbaler"><p></p></div><div class="clearfix"></div></div>';
-			echo $after_widget;
+			echo $args['after_widget'];
 		}
 		function update($new_instance, $old_instance) {
 			$instance = $old_instance;
@@ -33,7 +34,7 @@
 			$tedad = intval($instance['tedad']);
 			$salida='<p>';
 			$salida.='<label for="'.$this->get_field_id('username').'">نام کاربری :</label>';
-			$salida.='<input class="widefat" id="'.$this->get_field_id('username').'" name="'.$this->get_field_name('username').'" type="text" value="'.(empty($username) ? 'donbaler' : $username).'" style="direction:ltr;text-align:left" />';
+			$salida.='<input class="widefat" id="'.$this->get_field_id('username').'" name="'.$this->get_field_name('username').'" type="text" value="'.(empty($username) ? 'donbaler' : $username).'" style="direction:ltr;text-align:left" /><br><small style="text-align: left;direction: ltr;width: 100%;float: left;margin-bottom: 10px;">http://donbaler.com/<b>username</b></small>';
 			$salida.='</p>';
 			$salida .='<p>';
 			$salida.='<label for="'.$this->get_field_id('tedad').'">تعداد ارسالها :</label>';
@@ -44,7 +45,7 @@
 	}
 	
 	function donbaler_head(){
-		wp_enqueue_script('donnbaler-widget-js', plugins_url('donbaler.js', __FILE__), array('jquery'), '1.3.2', false);
+		wp_enqueue_script('donnbaler-widget-js', plugins_url('donbaler.js', __FILE__), array('jquery'), '1.3.3', true);
 		wp_enqueue_style('donbaler-widget-css', plugins_url('donbaler.css', __FILE__), array(), '1.3.2', 'all');
 	}
 	
