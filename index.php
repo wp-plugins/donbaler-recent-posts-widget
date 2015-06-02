@@ -4,7 +4,7 @@
 		Plugin Name: Donbaler Recent Posts Widget
 		Plugin URI: https://wordpress.org/plugins/donbaler-recent-posts-widget/
 		Description: ابزارک نمایش آخرین ارسال‌های کاربر دنبالر ...
-		Version: 1.3
+		Version: 1.4
 		Author: Navid Shayesteh, Nima Saberi
 		Author URI: http://ideyeno.ir
 	*/
@@ -19,7 +19,7 @@
 			$tedad = apply_filters('widget_tedad', $instance['tedad']);
 			echo $args['before_widget'];
 			echo $args['before_title'] . apply_filters( 'widget_title', (!empty($instance['title']) ? $instance['title'] : 'ابزارک دنبالر') ). $args['after_title'];
-			echo '<script type="text/javascript">var donbaler_user = "'.esc_attr($username).'"; var donbaler_numpost = "'.intval($tedad).'";</script>';
+			echo '<script type="text/javascript">jQuery(document).ready(function($) {jQuery("#Donbaler").Donbaler({image_size : 30, count : "'.intval($tedad).'", username: "'.esc_attr($username).'", convert_links : 1, loader_text : "درون‌ریزی "+'.intval($tedad).'+" پست آخر از دنبالر ..."});});</script>';
 			echo '<div id="donbaler_div"><div id="Donbaler_profile"></div><div id="Donbaler"><p></p></div><div class="clearfix"></div></div>';
 			echo $args['after_widget'];
 		}
@@ -45,7 +45,7 @@
 	}
 	
 	function donbaler_head(){
-		wp_enqueue_script('donnbaler-widget-js', plugins_url('donbaler.js', __FILE__), array('jquery'), '1.3.3', true);
+		wp_enqueue_script('donnbaler-widget-js', plugins_url('donbaler.js', __FILE__), array('jquery'), '1.4', true);
 		wp_enqueue_style('donbaler-widget-css', plugins_url('donbaler.css', __FILE__), array(), '1.3.2', 'all');
 	}
 	
