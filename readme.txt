@@ -1,7 +1,7 @@
  === Donbaler Recent Posts Widget ===
 Contributors: nipoto
 Donate link: http://ideyeno.ir
-Tags: aparat, video, clip, آپارات
+Tags: donbaler, recent posts, widget, microblog, میکروبلاگ, دنبالر, ابزارک, شبکه اجتماعی
 Requires at least: 3.0.1
 Tested up to: 4.2.2
 Stable tag: 1.0.5
@@ -9,6 +9,15 @@ License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ابزارک نمایش آخرین ارسال‌های کاربر دنبالر ...
+
+= تنظیمات ابزارک =
+* امکان درج نام کاربری مورد نظر
+* امکان تعیین تعداد ارسال‌ها برای نمایش
+
+= نمایش ابزارک =
+* نمایش نام، نام کاربری و تصویر کاربر در صفحه
+* نمایش تعداد ارسال‌ها، دنبال کننده‌ها و دنبال شده‌ها
+* نمایش آخرین ارسال‌های کاربر
 
 == Description ==
 
@@ -24,3 +33,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 = 1.3 =
 * سازگاری با آخرین تغییرات وردپرس
+
+== Screenshots ==
+
+1. تنظیمات ابزارک دنبالر
+2. نمایش ابزارک دنبالر در صفحات
